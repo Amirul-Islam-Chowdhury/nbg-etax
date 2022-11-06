@@ -11,12 +11,29 @@ export default function Admin()
   return (
 
     <Layout>
-      <button className='btn'
-        onClick={() => navigate(`../add`)}>
-          Add new user
+      <div className='button-container'>
 
-        </button>
+<p className='title'>Admin Logged</p>
 
+<button className='btn'
+onClick={() => navigate(`../addUsers`)}>
+  Add New User
+
+</button>
+<button className='btn'
+onClick={() => navigate(`../view`)}>
+  View List
+
+</button>
+<button className='btn'
+onClick={() => navigate(`./service`)}>
+  Service
+
+</button>
+
+
+
+</div>
 
 
 

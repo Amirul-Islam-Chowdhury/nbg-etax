@@ -1,10 +1,10 @@
-import { async } from "@firebase/util";
 import {
   collection,
   getDocs,
   addDoc,
   updateDoc,
   doc,
+  deleteDoc,
 } from "firebase/firestore";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -15,6 +15,7 @@ export default function AddUsers() {
   const [newName, setName] = useState("");
   const [house, setHouse] = useState(0);
   const [ward, setWard] = useState(0);
+  const [totalTax, settotalTax] = useState(0);
   const [users, setUsers] = useState([]);
   const usersCollectionRef = collection(db, "users");
 
@@ -23,34 +24,54 @@ export default function AddUsers() {
       name: newName,
       house: house,
       ward: ward,
+      totalTax: totalTax,
     });
-  };
-
-  const editData = async (id, name, house, ward) => {
-    const userDoc = doc(db, "user", id);
-    const newField = { name: "", house: "", ward: "" };
-
-    await updateDoc(userDoc, newField);
+    window.location.reload();
+    console.log("success")
+    alert(" Data Added")
   };
 
   useEffect(() => {
-    const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef);
-      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getUsers();
+    getData();
   }, []);
+
+  async function getData() {
+    try {
+      const users = await getDocs(collection(db, "users"));
+      const usersArray = [];
+      users.forEach((doc) => {
+        const obj = {
+          id: doc.id,
+          ...doc.data(),
+        };
+        usersArray.push(obj);
+      });
+
+      setUsers(usersArray);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // useEffect(() => {
+
+  //   getUsers();
+  //   async function getUsers(){
+  //       const data = await getDocs(usersCollectionRef);
+
+  //       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //     };
+
+  // }, []);
 
   return (
     <Layout>
-      <h2>List of users</h2>
-
       <input
         placeholder="Name"
         onChange={(event) => {
           setName(event.target.value);
         }}
       />
+      <br></br>
       <input
         type="number"
         placeholder="House No"
@@ -58,6 +79,8 @@ export default function AddUsers() {
           setHouse(event.target.value);
         }}
       />
+      <br></br>
+
       <input
         type="number"
         placeholder="Ward No"
@@ -65,47 +88,20 @@ export default function AddUsers() {
           setWard(event.target.value);
         }}
       />
-      <button onClick={createNewUser}>Add new user:</button>
+      <br></br>
 
-    
-    
-   
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Owner</th>
-                  <th scope="col">Ward No.</th>
-                  <th scope="col">House No.</th>
-                </tr>
-              </thead>
-              <tbody>
-                  {users.map((user,index) =>(
+      <input
+        type="number"
+        placeholder="Tax Amount "
+        onChange={(event) => {
+          settotalTax(event.target.value);
+        }}
+      />
 
-                  
-                    <tr >
+      <br></br>
+      <br></br>
 
-                    <th scope="row">{index+1} </th>
-                    <td>{user.name}</td>
-                    <td>{user.ward}</td>
-                    <td>{user.house}</td>
-                    <td>
-                      <button>Edit</button>
-                    <button>Delete</button>
-                    </td>
-                    </tr>
-
-          ))}
-                    
-
-              
-                  
-              
-                  
-              </tbody>
-            </table>
-        
-      
+      <button className="login-btn success" onClick={createNewUser}>Sumbit</button>
     </Layout>
   );
 }

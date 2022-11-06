@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function UserProfilePage() {
+  return (
+    <div>
+        
+        
+        <h1>User Profie page</h1></div>
+  )
+}

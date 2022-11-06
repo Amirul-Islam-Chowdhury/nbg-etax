@@ -1,7 +1,7 @@
 
 
 .button-container {
-    width: 300px;
+    width: 600px;
     height: 300px;
     display: grid;
     margin: auto;
@@ -19,7 +19,7 @@
     color: #fff;
     border: 1px solid;
     padding: 10px;
-    width: 100px;
+    width: 300px;
     outline: none;
     margin: auto;
 }
@@ -28,7 +28,7 @@
     color: rgb(253, 253, 253);
     text-align: start;
     padding-bottom: 5px;
-    background-color: rgb(196, 230, 196);
+    background-color: rgb(94, 235, 0);
     margin-top: 0;
 
     }
