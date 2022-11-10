@@ -12,6 +12,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import UserList from './pages/UserList';
 import UserLogin from './pages/UserLogin';
 import UserProfilePage from './pages/UserProfilePage';
+import AdminLoginPage from './pages/AdminLoginPage';
+import RegisterNewUser from './pages/RegisterNewUser';
+import UpdateData from './pages/UpdateData';
+import UserDetails from './pages/UserDetails';
 
 
 
@@ -21,13 +25,16 @@ function App() {
 
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tax" element={<UserLogin />} />
+        <Route path="/adminlogin" exact element={<AdminLoginPage />} />
+        <Route path="/registernewuser" exact element={<RegisterNewUser />} />
+        <Route path="/userlogin" element={<UserLogin />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/add" exact element={<AddUsers />} />
         <Route path="/addUsers/" element={<AddUsers />} />
         <Route path="/view/" element={<UserList />} />
-        <Route path="/userinfopage/:id" element={<UserProfilePage />} />
+        <Route path="/update/:id" exact element={<UpdateData />} />
+        <Route path="/userinfopage"exact element={<UserProfilePage />} />
+        <Route path="/details/:id"exact element={<UserDetails />} />
 
 
       </Routes>
@@ -35,6 +42,7 @@ function App() {
       
     </div>
   );
+  
 }
 
 export default App;

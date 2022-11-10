@@ -11,12 +11,12 @@ function Menu() {
         <p className='title'>Home</p>
 
         <button className='btn'
-        onClick={() => navigate(`./tax`)}>
+        onClick={() => navigate(`./userlogin`)}>
           Login as User
 
         </button>
         <button className='btn'
-        onClick={() => navigate(`./admin`)}>
+        onClick={() => navigate(`./adminlogin`)}>
           Login as Admin
 
         </button>

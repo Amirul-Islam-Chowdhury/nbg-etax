@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-
-
-import Layout from '../components/Layout'
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
-import {  useNavigate } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout";
 
+export default function AdminLoginPage() {
 
-
-export default function UserLogin() {
-
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate= useNavigate()
-
+  
   const auth = getAuth();
 
 
@@ -22,34 +18,25 @@ export default function UserLogin() {
 
     try {
 
-      const result = await signInWithEmailAndPassword(auth, email, password).then(()=>{
-        navigate(`../userinfopage/`)
-
-
-      })
+      const result = await signInWithEmailAndPassword(auth, email, password);
       // localStorage.setItem("currentuser", JSON.stringify(result));
-      console.log("successful")
+      window.location.href = "/admin";
+      console.log("logged in")
     } catch (error) {
-      console.log("worng password");
+      console.log("incorrect credentials");
+      // setSpinner(false)
+      
+      // toast.error(" Please enter correct Email & Password")
     }
   };
-  
+
   return (
-  
     <div>
     <Layout/>
 
 
-
-    
-
-
-    <div className="contanier">
-    <div className="title">
-
-<h3> User Login</h3>
-</div>
-
+    <div className="form">
+          <h1 className="login-page-head">Admin  Login</h1>
           <div className="login-form">
             <hr />
 
@@ -76,7 +63,7 @@ export default function UserLogin() {
 
            
            
-            <button className="btn btn-primary" onClick={login}>
+            <button className="login-btn success" onClick={login}>
               {" "}
               Login{" "}
             </button>
@@ -86,6 +73,7 @@ export default function UserLogin() {
     </div>
 
    
-  )
+      
+    
+  );
 }
-

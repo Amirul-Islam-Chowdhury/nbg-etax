@@ -10,7 +10,7 @@ function Header() {
 <div class="header">
   <a href="#defualt" class="logo">CompanyLogo</a>
   <div class="header-right">
-    <a class="T" href="#home">Nabiganj Municipality E-Tax</a>
+    <h1 class="T" href="#home">Nabiganj Municipality E-Tax</h1>
     
   </div>
 </div>

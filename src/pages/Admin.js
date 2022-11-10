@@ -16,8 +16,13 @@ export default function Admin()
 <p className='title'>Admin Logged</p>
 
 <button className='btn'
+onClick={() => navigate(`../registernewuser`)}>
+  Register New user
+
+</button>
+<button className='btn'
 onClick={() => navigate(`../addUsers`)}>
-  Add New User
+  Input data
 
 </button>
 <button className='btn'
