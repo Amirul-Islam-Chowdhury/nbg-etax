@@ -24,11 +24,11 @@ function App() {
     <div className="App">
 
     <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/adminlogin" exact element={<AdminLoginPage />} />
         <Route path="/registernewuser" exact element={<RegisterNewUser />} />
         <Route path="/userlogin" element={<UserLogin />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" exact element={<Admin />} />
         <Route path="/service" element={<Service />} />
         <Route path="/addUsers/" element={<AddUsers />} />
         <Route path="/view/" element={<UserList />} />

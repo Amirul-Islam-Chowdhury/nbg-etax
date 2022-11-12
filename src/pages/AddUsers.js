@@ -52,16 +52,7 @@ export default function AddUsers() {
       console.log(error);
     }
   }
-  // useEffect(() => {
-
-  //   getUsers();
-  //   async function getUsers(){
-  //       const data = await getDocs(usersCollectionRef);
-
-  //       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //     };
-
-  // }, []);
+ 
 
   return (
     <Layout>

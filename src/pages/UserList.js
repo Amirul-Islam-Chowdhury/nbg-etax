@@ -80,7 +80,9 @@ useEffect(() => {
                   <th scope="col">Owner</th>
                   <th scope="col">Ward No.</th>
                   <th scope="col">House No.</th>
-                  <th scope="col">Tax</th>
+                  <th scope="col">House type</th>
+                  <th scope="col">Tax Paid</th>
+                  <th scope="col"> Total Tax </th>
                 </tr>
               </thead>
               <tbody>
@@ -93,16 +95,19 @@ useEffect(() => {
                     <td>{user.name}</td>
                     <td>{user.ward}</td>
                     <td>{user.house}</td>
+                    <td>{user.houseType}</td>
+                    <td>{user.taxPaid}</td>
+
                     <td>{user.totalTax}</td>
                     <td>
 
-                      <div>
+                      <div >
 
-                      <Link className="btn btn-primary" to= {(`/update/${user.id}`)}>update</Link>
-                      <Link className="btn btn-secondary" to= {(`/details/${user.id}`)}>view</Link>
+                      <Link className="upadte_btn" to= {(`/update/${user.id}`)}>update</Link>
+                      <Link className="view_btn" to= {(`/details/${user.id}`)}>view</Link>
 
 
-                    <button className=" btn btn-danger"onClick={()=>{handleDelete(user.id)}}>Delete</button>
+                    <Link className="delete_btn"onClick={()=>{handleDelete(user.id)}}>Delete</Link>
 
                       </div>
 

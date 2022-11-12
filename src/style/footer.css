@@ -3,11 +3,12 @@
     margin-top: 10px;
 }
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #0193d6;
     color: white;
     text-align: center;
+    overflow: hidden;
   }

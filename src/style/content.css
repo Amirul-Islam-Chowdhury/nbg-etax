@@ -9,6 +9,8 @@
   border: 3px solid green;
   padding: 10px;
   margin-top: 5%;
+  height: fit-content;
+
   
  
 }
@@ -26,9 +28,27 @@
 .title{
 
     color: rgb(253, 253, 253);
-    text-align: start;
+    text-align: center;
     padding-bottom: 5px;
-    background-color: rgb(94, 235, 0);
+    background-color: #04aa6d;
     margin-top: 0;
 
     }
+
+    .center {
+      margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
+      margin-top: 8%;
+      text-align: justify;
+  }
+  .content{
+    
+    flex:1;
+    text-align:center;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+    
+}

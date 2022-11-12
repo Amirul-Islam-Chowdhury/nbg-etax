@@ -31,9 +31,9 @@ export default function UpdateData() {
       const userTemp = await updateDoc(dbRef, {name: name, totalTax:totalTax})
 
 
-      console.log(userTemp.data())
 
       setUser(userTemp.data());
+      alert("Data Updated")
     } catch (error) {
       console.log(error);
     }
@@ -48,12 +48,14 @@ export default function UpdateData() {
   return (
     <div>
       
-      <Layout/>
+      <Layout>
 
       <div className="title">
 
-        <h3> Update Data</h3>
+        <h3> Update Tax Data</h3>
       </div>
+
+      <div className="register_form">
 
       <input
         placeholder="Name"
@@ -76,10 +78,12 @@ export default function UpdateData() {
               Update{" "}
             </button>
      
-    
 
-      <br></br>
-      <br></br>
+
+      </div>
+
+      
+    
 
     
 
@@ -87,7 +91,7 @@ export default function UpdateData() {
 
 
         
-        
+        </Layout>
         </div>
   )
 }

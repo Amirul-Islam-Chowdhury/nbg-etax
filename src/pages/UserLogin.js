@@ -35,21 +35,12 @@ export default function UserLogin() {
   };
   
   return (
-  
+
     <div>
-    <Layout/>
-
-
-
-    
-
-
-    <div className="contanier">
-    <div className="title">
-
-<h3> User Login</h3>
-</div>
-
+      <Layout>
+  
+    <div className="register_form">
+          <h1 className="login-page-head">User  Login</h1>
           <div className="login-form">
             <hr />
 
@@ -76,14 +67,17 @@ export default function UserLogin() {
 
            
            
-            <button className="btn btn-primary" onClick={login}>
+            <button className="login-btn success" onClick={login}>
               {" "}
               Login{" "}
             </button>
           </div>
         </div>
+        </Layout>
 
     </div>
+
+
 
    
   )

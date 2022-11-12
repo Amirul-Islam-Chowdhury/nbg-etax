@@ -19,9 +19,10 @@ export default function AdminLoginPage() {
     try {
 
       const result = await signInWithEmailAndPassword(auth, email, password);
+      navigate(`../admin/`)
+
       // localStorage.setItem("currentuser", JSON.stringify(result));
-      window.location.href = "/admin";
-      console.log("logged in")
+      console.log(result)
     } catch (error) {
       console.log("incorrect credentials");
       // setSpinner(false)
@@ -32,10 +33,10 @@ export default function AdminLoginPage() {
 
   return (
     <div>
-    <Layout/>
+    <Layout>
 
 
-    <div className="form">
+    <div className="register_form">
           <h1 className="login-page-head">Admin  Login</h1>
           <div className="login-form">
             <hr />
@@ -69,6 +70,7 @@ export default function AdminLoginPage() {
             </button>
           </div>
         </div>
+        </Layout>
 
     </div>
 

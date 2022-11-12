@@ -4,14 +4,8 @@ import { getDoc, doc } from "firebase/firestore";
 import db from "../firebaseCon";
 import { useParams } from "react-router";
 
-
-
-
-
- function UserDetails() {
-
-
-const [user, setUser] = useState();
+function UserDetails() {
+  const [user, setUser] = useState();
   const params = useParams();
 
   useEffect(() => {
@@ -22,8 +16,7 @@ const [user, setUser] = useState();
     try {
       const userTemp = await getDoc(doc(db, "users", params.id));
 
-
-      console.log(userTemp.data())
+      console.log(userTemp.data());
 
       setUser(userTemp.data());
     } catch (error) {
@@ -31,25 +24,38 @@ const [user, setUser] = useState();
     }
   }
   return (
-
-
-
-
     <div>
+      <Layout >
 
+     
+      <div className="button-container">
 
-        <Layout/>
-
-        <div className='title'>
+        <p className="title"> User details</p>
+        <h3>
+          Owner Name: <b>{user && user.name} </b>
+        </h3>
+        <br></br>
+        <h3>
+          House No. : <b>{user && user.houseNo} </b>
+        </h3>
+        <h3>
+          House Type : <b>{user && user.houseType} </b>
+        </h3>
+        <h3>
+          Ward No. : <b>{user && user.ward} </b>
+        </h3>
+        <h3>
+          Total Tax : <b>{user && user.totalTax} </b>
         
-        <h3> User Details</h3>
-        {user && user.name}
-
-        </div>
-
-
+        </h3>
+        <h3>
+          Phone : <b>{user && user.Phone} </b>
         
+        </h3>
+      </div>
+
+      </Layout>
     </div>
-  )
+  );
 }
 export default UserDetails;

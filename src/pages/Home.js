@@ -8,8 +8,12 @@ function Home() {
 
     <div>
 
-        <Layout/>
+      <Layout>
         <Menu/>
+
+      </Layout>
+
+        
         
 
     </div>

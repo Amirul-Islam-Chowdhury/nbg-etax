@@ -37,45 +37,37 @@ export default function UserProfilePage() {
 
   return (
     <div>
-      <Layout>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">User Id :</div>
-            <div class="col-sm">User name: </div>
-            <div class="col-sm">House NO.:</div>
-          </div>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Hold Tyoe</th>
-              <th scope="col">Ward No.</th>
-              <th scope="col">House No.</th>
-              <th scope="col">Tax</th>
-            </tr>
-          </thead>
-          <tbody>
-            {user && (
-              <tr>
-                <th scope="row"> </th>
-                <td>{user.name}</td>
-                <td>{user.ward}</td>
-                <td>{user.house}</td>
-                <td>{user.totalTax}</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+      <Layout >
 
+      <div className="button-container">
+        <h3> User Details</h3>
+      </div>
+
+      <div className="center">
+        <h3>
+          Owner Name: <b>{user && user.name} </b>
+        </h3>
+        <br></br>
+        <h3>
+          House No. : <b>{user && user.houseNo} </b>
+        </h3>
+        <h3>
+          House Type : <b>{user && user.houseType} </b>
+        </h3>
+        <h3>
+          Ward No. : <b>{user && user.ward} </b>
+        </h3>
+        <h3>
+          Total Tax : <b>{user && user.totalTax} </b>
         
-
-     
-
+        </h3>
+        <h3>
+          Phone : <b>{user && user.Phone} </b>
+        
+        </h3>
+      </div>
 
       </Layout>
-
-      
     </div>
   );
 }
