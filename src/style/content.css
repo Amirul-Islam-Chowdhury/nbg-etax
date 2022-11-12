@@ -1,7 +1,7 @@
 
 
 .button-container {
-    width: 600px;
+    width: fit-content;
     height: 300px;
     display: grid;
     margin: auto;
@@ -10,6 +10,7 @@
   padding: 10px;
   margin-top: 5%;
   height: fit-content;
+
 
   
  
@@ -24,6 +25,8 @@
     width: 300px;
     outline: none;
     margin: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 .title{
 

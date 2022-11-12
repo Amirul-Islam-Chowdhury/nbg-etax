@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Layout from '../components/Layout'
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import {  useNavigate } from "react-router-dom";
+import {toast} from "react-toastify"
+
 
 
 
@@ -31,6 +33,8 @@ export default function UserLogin() {
       console.log("successful")
     } catch (error) {
       console.log("worng password");
+      toast.error("Incorrect Credential")
+
     }
   };
   

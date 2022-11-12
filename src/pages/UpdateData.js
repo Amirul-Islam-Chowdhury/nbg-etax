@@ -13,27 +13,25 @@ import Layout from "../components/Layout";
 import db from "../firebaseCon";
 
 export default function UpdateData() {
-
-
   const [name, setName] = useState("");
   const [totalTax, settotalTax] = useState("");
-  
- 
+  const [taxPaid, settaxPaid] = useState("");
+
   const [user, setUser] = useState([]);
   const params = useParams();
-   
-
 
   async function updateData() {
     try {
-      const dbRef = doc(db, `users`,params.id)
+      const dbRef = doc(db, `users`, params.id);
 
-      const userTemp = await updateDoc(dbRef, {name: name, totalTax:totalTax})
-
-
+      const userTemp = await updateDoc(dbRef, {
+        name: name,
+        taxPaid:taxPaid,
+        totalTax: totalTax,
+      });
 
       setUser(userTemp.data());
-      alert("Data Updated")
+      alert("Data Updated");
     } catch (error) {
       console.log(error);
     }
@@ -43,56 +41,53 @@ export default function UpdateData() {
     updateData();
   }, []);
 
-  
-
   return (
     <div>
-      
       <Layout>
 
-      <div className="title">
+        <div>
+          <div className="register_form">
+            <h1>UPDATE TAX </h1>
+          
 
-        <h3> Update Tax Data</h3>
-      </div>
+        <div className="">
+          <input
+            placeholder="Name"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+          <br></br>
+          <input
+            type="number"
+            placeholder="Total Tax"
+            onChange={(event) => {
+              settotalTax(event.target.value);
+            }}
+          />
+          <br></br>
+          <input
+            type="number"
+            placeholder="Total Paid"
+            onChange={(event) => {
+              settaxPaid(event.target.value);
+            }}
+          />
+          <br></br>
 
-      <div className="register_form">
-
-      <input
-        placeholder="Name"
-        onChange={(event) => {
-          setName(event.target.value);
-        }}
-      />
-      <br></br>
-      <input
-        type="number"
-        placeholder="Total Tax"
-        onChange={(event) => {
-          settotalTax(event.target.value);
-        }}
-      />
-      <br></br>
-
-      <button className="login-btn success" onClick={updateData}>
-              {" "}
-              Update{" "}
-            </button>
-     
-
-
-      </div>
-
-      
-    
-
-    
-
-
-
-
-        
-        </Layout>
+          <button className="btn btn-success" onClick={updateData}>
+            {" "}
+            Update{" "}
+          </button>
         </div>
-  )
-}
 
+
+          </div>
+
+
+        </div>
+       
+      </Layout>
+    </div>
+  );
+}

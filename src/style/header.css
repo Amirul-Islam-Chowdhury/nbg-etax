@@ -58,4 +58,23 @@
     }
   }
 
+  .navbar{
+    background-color:#0193d6!important
+    
+}
+.navbar-brand{
+  color: white !important;
+  font-size: 30px !important
+}
+.logo{
+  justify-content: space-around;
+  padding-left: 20px;
+}
+.nav-link{
+  color: white !important;
+}
+
+
+
+
   

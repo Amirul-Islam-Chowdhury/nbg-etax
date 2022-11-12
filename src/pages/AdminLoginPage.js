@@ -3,6 +3,8 @@ import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
+import {toast} from "react-toastify"
+
 
 export default function AdminLoginPage() {
 
@@ -24,10 +26,10 @@ export default function AdminLoginPage() {
       // localStorage.setItem("currentuser", JSON.stringify(result));
       console.log(result)
     } catch (error) {
-      console.log("incorrect credentials");
+      console.log(error);
       // setSpinner(false)
       
-      // toast.error(" Please enter correct Email & Password")
+      toast.error("Incorrect Credential")
     }
   };
 

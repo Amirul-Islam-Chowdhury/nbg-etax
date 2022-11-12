@@ -1,14 +1,18 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import Banner from './Banner';
 
 
 function Menu() {
   const navigate = useNavigate();
 
   return (
+    
     <div className='button-container'>
 
-        <p className='title'>Home</p>
+
+
+        <p className='title'> E-service</p>
 
         <button className='btn'
         onClick={() => navigate(`./userlogin`)}>

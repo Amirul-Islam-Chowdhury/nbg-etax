@@ -39,7 +39,7 @@ export default function UserProfilePage() {
     <div>
       <Layout >
 
-      <div className="button-container">
+      <div className="title">
         <h3> User Details</h3>
       </div>
 
@@ -62,9 +62,11 @@ export default function UserProfilePage() {
         
         </h3>
         <h3>
-          Phone : <b>{user && user.Phone} </b>
+          Tax Paid : <b>{user && user.taxPaid} </b>
         
         </h3>
+        
+        
       </div>
 
       </Layout>

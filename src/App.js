@@ -4,6 +4,7 @@ import "./style/header.css"
 import "./style/footer.css"
 import "./style/content.css"
 import "./style/regi.css"
+import "./style/banner.css"
 import { Routes, Route, Link } from "react-router-dom";
 import Admin from './pages/Admin';
 import Service from './pages/Service';
@@ -16,12 +17,19 @@ import AdminLoginPage from './pages/AdminLoginPage';
 import RegisterNewUser from './pages/RegisterNewUser';
 import UpdateData from './pages/UpdateData';
 import UserDetails from './pages/UserDetails';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import Banner from './components/Banner';
+
+
 
 
 
 function App() {
   return (
     <div className="App">
+            <ToastContainer/>
+
 
     <Routes>
         <Route path="/" element={<Home/>} />

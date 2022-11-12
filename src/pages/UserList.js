@@ -11,12 +11,12 @@ import {
   import Layout from "../components/Layout";
   import db from "../firebaseCon";
   import {  Link, useNavigate } from "react-router-dom";
+import index from "toastify";
 
 
 export default function UserList() {
 
     const [users, setUsers] = useState([]);
-    const usersCollectionRef = collection(db, "users");
 
     const navigate= useNavigate()
 
@@ -81,7 +81,6 @@ useEffect(() => {
                   <th scope="col">Ward No.</th>
                   <th scope="col">House No.</th>
                   <th scope="col">House type</th>
-                  <th scope="col">Tax Paid</th>
                   <th scope="col"> Total Tax </th>
                 </tr>
               </thead>
@@ -96,7 +95,6 @@ useEffect(() => {
                     <td>{user.ward}</td>
                     <td>{user.house}</td>
                     <td>{user.houseType}</td>
-                    <td>{user.taxPaid}</td>
 
                     <td>{user.totalTax}</td>
                     <td>

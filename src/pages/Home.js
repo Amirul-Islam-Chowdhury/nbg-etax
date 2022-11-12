@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../components/Banner'
 import Layout from '../components/Layout'
 import Menu from '../components/Menu'
 
@@ -9,6 +10,7 @@ function Home() {
     <div>
 
       <Layout>
+        <Banner/>
         <Menu/>
 
       </Layout>
