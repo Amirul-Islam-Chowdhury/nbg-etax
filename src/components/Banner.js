@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Banner() {
   return (
+      <div className='news'>
+              <marquee > <h5 className='news-line'>*** This  web portal has made for testing purspose only ***!</h5></marquee>
 
 
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -29,6 +31,12 @@ export default function Banner() {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
+
+
+      </div>
+
 
 
     

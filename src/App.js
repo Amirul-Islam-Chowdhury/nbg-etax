@@ -20,6 +20,7 @@ import UserDetails from './pages/UserDetails';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Banner from './components/Banner';
+import Contact from './pages/Contact';
 
 
 
@@ -43,6 +44,7 @@ function App() {
         <Route path="/update/:id" exact element={<UpdateData />} />
         <Route path="/userinfopage"exact element={<UserProfilePage />} />
         <Route path="/details/:id"exact element={<UserDetails />} />
+        <Route path="/contact"exact element={<Contact />} />
 
 
       </Routes>

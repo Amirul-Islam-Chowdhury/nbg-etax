@@ -36,7 +36,7 @@ function Header() {
     <div>
       <nav className="navbar navbar-expand-lg ">
       <div className='logo'>
-          <img src='logo-nabiganj.jpeg' height="50" width="50" alt='logo'/>
+          <img src='logo-nabiganj.jpeg' height="70" width="70" alt='logo'/>
 
 
           </div>
@@ -54,17 +54,11 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {/* <span className="navbar-toggler-icon">
-              <FaBars />
-            </span> */}
+          
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              {/* <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  {user.email.substring(0, user.email.length - 10)}
-                </Link>
-              </li> */}
+             
 
 <li className="nav-item">
                 <Link className="nav-link" to="/" onClick={loginOut}>

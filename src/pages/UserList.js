@@ -101,7 +101,7 @@ useEffect(() => {
 
                       <div >
 
-                      <Link className="upadte_btn" to= {(`/update/${user.id}`)}>update</Link>
+                      <Link className="update_btn" to= {(`/update/${user.id}`)}>update</Link>
                       <Link className="view_btn" to= {(`/details/${user.id}`)}>view</Link>
 
 

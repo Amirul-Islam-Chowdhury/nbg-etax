@@ -12,7 +12,8 @@ function Menu() {
 
 
 
-        <p className='title'> E-service</p>
+
+        <h4 className='title'> E-service</h4>
 
         <button className='btn'
         onClick={() => navigate(`./userlogin`)}>
@@ -25,7 +26,7 @@ function Menu() {
 
         </button>
         <button className='btn'
-        onClick={() => navigate(`./service`)}>
+        onClick={() => navigate(`./contact`)}>
           Contact Us
 
         </button>
