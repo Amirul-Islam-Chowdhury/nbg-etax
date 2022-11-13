@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
-import { BiArrowToLeft } from "react-icons/bi/";
 
 
 
@@ -60,11 +59,7 @@ function Header() {
             <ul className="navbar-nav ms-auto">
              
 
-<li className="nav-item">
-                <Link className="nav-link" to="/" onClick={loginOut}>
-                <BiArrowToLeft/> {("Logout")}
-                </Link>
-              </li>
+             
              
 
               

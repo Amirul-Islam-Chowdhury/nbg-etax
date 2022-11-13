@@ -70,7 +70,7 @@ useEffect(() => {
         <Layout>
         <div className="title">
 
-        <h3> UserList</h3>
+        <h3> Users List</h3>
       </div>
 
         <table class="table">
@@ -85,15 +85,15 @@ useEffect(() => {
                 </tr>
               </thead>
               <tbody>
-                  {users.map((user) =>(
+                  {users.map((user,index) =>(
 
                   
                     <tr >
 
-                    <th scope="row">{user.id} </th>
+                    <th scope="row">{index+1} </th>
                     <td>{user.name}</td>
                     <td>{user.ward}</td>
-                    <td>{user.house}</td>
+                    <td>{user.houseNo}</td>
                     <td>{user.houseType}</td>
 
                     <td>{user.totalTax}</td>
@@ -101,8 +101,8 @@ useEffect(() => {
 
                       <div >
 
-                      <Link className="update_btn" to= {(`/update/${user.id}`)}>update</Link>
-                      <Link className="view_btn" to= {(`/details/${user.id}`)}>view</Link>
+                      <Link className="update_btn" to= {(`/update/${user.id}`)}>Update</Link>
+                      <Link className="view_btn" to= {(`/details/${user.id}`)}>View</Link>
 
 
                     <Link className="delete_btn"onClick={()=>{handleDelete(user.id)}}>Delete</Link>

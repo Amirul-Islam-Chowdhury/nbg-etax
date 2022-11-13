@@ -13,9 +13,12 @@ import Layout from "../components/Layout";
 import db from "../firebaseCon";
 
 export default function UpdateData() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState();
   const [totalTax, settotalTax] = useState("");
   const [taxPaid, settaxPaid] = useState("");
+  const [firstPay, setfirstPay] = useState("");
+  const [secondPay, setsecondPay] = useState("");
+  const [thirdPay, setthirdPay] = useState("");
 
   const [user, setUser] = useState([]);
   const params = useParams();
@@ -27,6 +30,9 @@ export default function UpdateData() {
       const userTemp = await updateDoc(dbRef, {
         name: name,
         taxPaid:taxPaid,
+        firstPay:firstPay,
+        secondPay:secondPay,
+        thirdPay:taxPaid,
         totalTax: totalTax,
       });
 
@@ -45,12 +51,12 @@ export default function UpdateData() {
     <div>
       <Layout>
 
-        <div>
-          <div className="register_form">
-            <h1>UPDATE TAX </h1>
+        
+          <div className="">
+            <h1>UPDATE DATA FORM </h1>
           
 
-        <div className="">
+        <div className="register_form">
           <input
             placeholder="Name"
             onChange={(event) => {
@@ -68,7 +74,30 @@ export default function UpdateData() {
           <br></br>
           <input
             type="number"
-            placeholder="Total Paid"
+            placeholder="First Payment"
+            onChange={(event) => {
+              setfirstPay(event.target.value);
+            }}
+          />
+          <br></br>
+          <input
+            type="number"
+            placeholder="Second Payment"
+            onChange={(event) => {
+              setsecondPay(event.target.value);
+            }}
+          />
+          <br></br>
+          <input
+            type="number"
+            placeholder="Third Payment"
+            onChange={(event) => {
+              setthirdPay(event.target.value);
+            }}
+          />
+          <input
+            type="number"
+            placeholder="Tax Paid"
             onChange={(event) => {
               settaxPaid(event.target.value);
             }}
@@ -82,7 +111,7 @@ export default function UpdateData() {
         </div>
 
 
-          </div>
+        
 
 
         </div>

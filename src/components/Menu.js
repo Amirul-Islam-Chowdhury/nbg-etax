@@ -17,12 +17,12 @@ function Menu() {
 
         <button className='btn'
         onClick={() => navigate(`./userlogin`)}>
-          Login as User
+          Check Your Tax
 
         </button>
         <button className='btn'
         onClick={() => navigate(`./adminlogin`)}>
-          Login as Admin
+          Admin
 
         </button>
         <button className='btn'

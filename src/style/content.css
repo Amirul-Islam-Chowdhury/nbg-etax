@@ -10,6 +10,7 @@
   padding: 10px;
   margin-top: 5%;
   height: fit-content;
+  text-align: initial;
 
 
   
@@ -89,3 +90,14 @@
   margin: 2px;
 
 }
+.debt{
+  color: #f44336;
+}
+.btn-danger{
+  background-color: #f44336;
+ 
+  text-align: center;
+  color: rgb(255, 255, 255);
+  
+}
+

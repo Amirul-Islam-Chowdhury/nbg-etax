@@ -27,60 +27,57 @@ function UserDetails() {
     <div>
       <Layout>
         <div className="button-container">
-
           <p className="title"> User details</p>
 
+          <div class="row">
+            <div class="col-sm">
+              <p>---------- user info ----------------</p>
 
-         
-  <div class="row">
-    <div class="col-sm">
-    <h3>
-                House No : {user && user.houseNo} 
-              </h3>
-              <h3>
-                House Type : <b>{user && user.houseType} </b>
-              </h3>
-
-              <p>'''''''''''''''''''''''''''''''</p>
-
-              <h3>
-                Total Tax : <b>{user && user.totalTax} </b> 
-              </h3>
-
+              <h4>House No : {user && user.houseNo}</h4>
+              <h4>
+                Ward No : <b>{user && user.ward} </b>
+              </h4>
              
-</div>
-   
-    <div class="col-sm">
-    <h3>
+              <h4>
                 Owner Name: <b>{user && user.name} </b>
-              </h3>
+              </h4>
+              <h4>
+                House Type : <b>{user && user.houseType} </b>
+              </h4>
 
-
-    <h3>
+              <h4>
                 Phone : <b>{user && user.Phone} </b>
-              </h3>
-            
-           
+              </h4>
+
               
-              <h3>
-                Ward No. : <b>{user && user.ward} </b>
-              </h3>
-              
+            </div>
+
+            <div class="col-sm">
+              <p>---------- Tax info ---------------</p>
+
+              <h4>
+                1st payment : <b>{user && user.firstPay} </b>
+              </h4>
+              <h4>
+                2nd payment : <b>{user && user.secondPay} </b>
+              </h4>
+              <h4>
+                3rd payment : <b>{user && user.thirdPay} </b>
+              </h4>
+
+              <p>-------------------------------------------------</p>
+
               <h3>
                 Paid Tax: <b>{user && user.taxPaid} </b>
               </h3>
-             
-            
-      
-    </div>
-  </div>
 
-
-          
-              
-            
-             
-          
+              <h3>
+                Total Tax : <b>{user && user.totalTax} </b>
+              </h3>
+              <p>-------------------------------------------------</p>
+              <h5 className="debt"> Debt :</h5>
+            </div>
+          </div>
         </div>
       </Layout>
     </div>
