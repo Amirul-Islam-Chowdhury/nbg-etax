@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import { collection, setDoc, doc } from "firebase/firestore";
+import {  setDoc, doc } from "firebase/firestore";
 import db from "../firebaseCon";
 import Layout from "../components/Layout";
 
@@ -47,9 +47,7 @@ export default function RegisterNewUser() {
     <div>
       <Layout>
       <div>
-          {/* <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar"/>
-  </div> */}
+         
 
           <div class="register_form">
             <h1>REGISTER USER</h1>

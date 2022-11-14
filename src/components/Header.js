@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
 
 
 
@@ -11,23 +10,7 @@ import { getAuth, signOut } from "firebase/auth";
 function Header() {
 
 
-  const loginOut = async () => {
-    const auth = getAuth();
-
-
-    try {
-
-      const result = await signOut(auth).then(()=>{
-
-
-      })
-      // localStorage.setItem("currentuser", JSON.stringify(result));
-      console.log("successful")
-    } catch (error) {
-      console.log(error);
-
-    }
-  };
+ 
   return (
 
     

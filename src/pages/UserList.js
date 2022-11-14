@@ -10,16 +10,15 @@ import {
   import { useState, useEffect } from "react";
   import Layout from "../components/Layout";
   import db from "../firebaseCon";
-  import {  Link, useNavigate } from "react-router-dom";
-import index from "toastify";
+  import {  Link } from "react-router-dom";
 
 
 export default function UserList() {
 
     const [users, setUsers] = useState([]);
 
-    const navigate= useNavigate()
 
+    
 
     const handleDelete = async (id) => {
         const taskDocRef = doc(db, 'users', id)
@@ -76,7 +75,7 @@ useEffect(() => {
         <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">ID</th>
+                  <th scope="col">Reg No.</th>
                   <th scope="col">Owner</th>
                   <th scope="col">Ward No.</th>
                   <th scope="col">House No.</th>

@@ -28,7 +28,7 @@ export default function UserProfilePage() {
 
       })
       // localStorage.setItem("currentuser", JSON.stringify(result));
-      console.log("successful")
+      console.log(result)
     } catch (error) {
       console.log(error);
 
@@ -41,7 +41,7 @@ export default function UserProfilePage() {
 
   useEffect(() => {
     getData();
-  },[]);
+  },);
 
   async function getData() {
     try {
@@ -65,7 +65,7 @@ export default function UserProfilePage() {
             <div class="col-sm">
               <p>---------- user info ----------------</p>
 
-              <h4>House No : {user && user.houseNo}</h4>
+              <h4>House No : <b>{user && user.houseNo}</b></h4>
               <h4>
                 Ward No : <b>{user && user.ward} </b>
               </h4>
@@ -97,19 +97,20 @@ export default function UserProfilePage() {
               </h4>
 
               <p>-------------------------------------------------</p>
+              <h3>
+                Total Tax : <b>{user && user.totalTax} </b>
+              </h3>
 
               <h3>
                 Paid Tax: <b>{user && user.taxPaid} </b>
               </h3>
 
-              <h3>
-                Total Tax : <b>{user && user.totalTax} </b>
-              </h3>
+            
               <p>-------------------------------------------------</p>
-              <h5 className="debt"> Debt :</h5>
+              <h5 className="debt">Debt: {user && (user.totalTax-user.taxPaid)} </h5>
             </div>
           </div>
-          <Link className="btn-danger" onClick={(logOut)}>Log out</Link>
+          <Link className="btn btn-danger" onClick={(logOut)}>Log out</Link>
 
 
         </div>

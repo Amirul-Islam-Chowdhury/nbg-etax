@@ -10,7 +10,7 @@ function UserDetails() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, );
 
   async function getData() {
     try {
@@ -32,6 +32,7 @@ function UserDetails() {
           <div class="row">
             <div class="col-sm">
               <p>---------- user info ----------------</p>
+              <p> <b>UID:</b> {user && params.id.substring(0, params.id.length - 20)}***</p>
 
               <h4>House No : {user && user.houseNo}</h4>
               <h4>
@@ -75,7 +76,7 @@ function UserDetails() {
                 Total Tax : <b>{user && user.totalTax} </b>
               </h3>
               <p>-------------------------------------------------</p>
-              <h5 className="debt"> Debt :</h5>
+              <h5 className="debt"> Debt: {user && (user.totalTax-user.taxPaid)} </h5>
             </div>
           </div>
         </div>
