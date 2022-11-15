@@ -3,6 +3,8 @@ import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import {  setDoc, doc } from "firebase/firestore";
 import db from "../firebaseCon";
 import Layout from "../components/Layout";
+import {toast} from "react-toastify"
+
 
 // import {  ref, set } from "firebase/database";
 // import db from "../firebaseCon";
@@ -36,8 +38,9 @@ export default function RegisterNewUser() {
 
       });
 
+
       console.log(user.uid);
-      alert("user created");
+      toast.success("Registration Successful")
     } catch (error) {
       console.log(error);
     }

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Layout from "../components/Layout";
 import db from "../firebaseCon";
+import {toast} from "react-toastify"
+
 
 export default function UpdateData() {
   const [totalTax, settotalTax] = useState("");
@@ -12,24 +14,22 @@ export default function UpdateData() {
   const [secondPay, setsecondPay] = useState("");
   const [thirdPay, setthirdPay] = useState("");
 
-  const [user, setUser] = useState([]);
   const params = useParams();
 
-  async function updateData() {
+  const updateData = async()=> {
     try {
-      const dbRef = doc(db, `users`, params.id);
+      // const dbRef = doc(db, `users`, params.id);
 
-      const userTemp = await updateDoc(dbRef, {
+   await updateDoc(doc(db, "users", params.id), {
         taxPaid: taxPaid,
         firstPay: firstPay,
         secondPay: secondPay,
         thirdPay: thirdPay,
         totalTax: totalTax,
       });
+      console.log(" check")
 
-      setUser(userTemp.data());
-      console.log(user)
-      alert("Data Updated");
+      toast.success("Data Updated")
     } catch (error) {
       console.log(error);
     }

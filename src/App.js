@@ -20,7 +20,6 @@ import UserDetails from "./pages/UserDetails";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Contact from "./pages/Contact";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getAuth, signOut } from "firebase/auth";
-import { BiArrowToLeft } from "react-icons/bi/";
 
 
 export default function Admin() {
@@ -19,8 +18,7 @@ export default function Admin() {
 
 
       })
-      // localStorage.setItem("currentuser", JSON.stringify(result));
-      console.log("successful")
+      console.log(result)
     } catch (error) {
       console.log(error);
 
@@ -38,9 +36,7 @@ export default function Admin() {
         <button className="btn" onClick={() => navigate(`../registernewuser`)}>
           Register New user
         </button>
-        <button className="btn" onClick={() => navigate(`../addUsers`)}>
-          Input data
-        </button>
+        
         <button className="btn" onClick={() => navigate(`../view`)}>
           View List
         </button>
