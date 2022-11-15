@@ -40,9 +40,7 @@ export default function Admin() {
         <button className="btn" onClick={() => navigate(`../view`)}>
           View List
         </button>
-        <button className="btn" onClick={() => navigate(`./service`)}>
-          Service
-        </button>
+        
         <button className="btn btn-danger" onClick={logOut}>
           
           Log Out

@@ -31,7 +31,7 @@ function UserDetails() {
 
           <div class="row">
             <div class="col-sm">
-              <p>---------- user info ----------------</p>
+              <p>------ user info --------</p>
               <p> <b>UID:</b> {user && params.id.substring(0, params.id.length - 20)}***</p>
 
               <h4>House No : {user && user.houseNo}</h4>
@@ -54,7 +54,7 @@ function UserDetails() {
             </div>
 
             <div class="col-sm">
-              <p>---------- Tax info ---------------</p>
+              <p>---------- Tax info ----------</p>
 
               <h4>
                 1st payment : <b>{user && user.firstPay} </b>
@@ -66,7 +66,7 @@ function UserDetails() {
                 3rd payment : <b>{user && user.thirdPay} </b>
               </h4>
 
-              <p>-------------------------------------------------</p>
+              <p>-----------------------------</p>
 
               <h3>
                 Paid Tax: <b>{user && user.taxPaid} </b>
@@ -75,7 +75,7 @@ function UserDetails() {
               <h3>
                 Total Tax : <b>{user && user.totalTax} </b>
               </h3>
-              <p>-------------------------------------------------</p>
+              <p>-----------------------------</p>
               <h5 className="debt"> Debt: {user && (user.totalTax-user.taxPaid)} </h5>
             </div>
           </div>
