@@ -63,7 +63,7 @@ export default function UserProfilePage() {
 
           <div class="row">
             <div class="col-sm">
-              <p>---------- user info ----------------</p>
+              <p>---------- user info ------------</p>
 
               <h4>House No : <b>{user && user.houseNo}</b></h4>
               <h4>
@@ -84,7 +84,7 @@ export default function UserProfilePage() {
             </div>
 
             <div class="col-sm">
-              <p>---------- Tax info ---------------</p>
+              <p>---------- Tax info -------------</p>
 
               <h4>
                 1st payment : <b>{user && user.firstPay} </b>
@@ -96,7 +96,7 @@ export default function UserProfilePage() {
                 3rd payment : <b>{user && user.thirdPay} </b>
               </h4>
 
-              <p>-------------------------------------------------</p>
+              <p>-----------------------------</p>
               <h3>
                 Total Tax : <b>{user && user.totalTax} </b>
               </h3>
@@ -106,7 +106,7 @@ export default function UserProfilePage() {
               </h3>
 
             
-              <p>-------------------------------------------------</p>
+              <p>-----------------------------</p>
               <h5 className="debt">Debt: {user && (user.totalTax-user.taxPaid)} </h5>
             </div>
           </div>
