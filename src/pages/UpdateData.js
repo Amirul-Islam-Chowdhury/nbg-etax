@@ -18,7 +18,6 @@ export default function UpdateData() {
 
   const updateData = async()=> {
     try {
-      // const dbRef = doc(db, `users`, params.id);
 
    await updateDoc(doc(db, "users", params.id), {
         taxPaid: taxPaid,
@@ -35,9 +34,6 @@ export default function UpdateData() {
     }
   }
 
-  useEffect(() => {
-    updateData();
-  },);
 
   return (
     <div>

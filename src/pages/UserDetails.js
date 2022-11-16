@@ -10,7 +10,7 @@ function UserDetails() {
 
   useEffect(() => {
     getData();
-  }, );
+  },);
 
   async function getData() {
     try {
