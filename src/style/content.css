@@ -5,7 +5,7 @@
     height: 300px;
     display: grid;
     margin: auto;
-  width: 50%;
+  min-width: 50%;
   border: 3px solid green;
   padding: 10px;
   margin-top: 5%;
@@ -23,12 +23,14 @@
     color: #fff;
     border: 1px solid;
     padding: 10px;
-    width: 300px;
+    min-width: 200px;
+    width: fit-content;
     outline: none;
     margin: auto;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top: 16px;
     font-size: large;
+
 
 }
 .title{

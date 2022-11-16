@@ -1,12 +1,13 @@
 .register_form {
     border: 3px solid #f1f1f1;
-    width: 30%;
+    width: 40%;
     margin: auto;
     padding: 10px;
     margin-top: 1%;
-    max-width: 30%;
+    max-width: 50%;
     text-align: initial;
   overflow-x: scroll;
+  width: fit-content;
   
   }
   
