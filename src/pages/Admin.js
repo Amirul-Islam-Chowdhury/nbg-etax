@@ -27,11 +27,11 @@ export default function Admin() {
 
   return (
 
-    
+    <div>
     <Layout>
      
       <div className="button-container">
-        <p className="title">Admin Logged</p>
+        <p className="title">Admin Panel</p>
 
         <button className="btn" onClick={() => navigate(`../registernewuser`)}>
           Register New user
@@ -48,5 +48,6 @@ export default function Admin() {
 
       </div>
     </Layout>
+    </div>
   );
 }

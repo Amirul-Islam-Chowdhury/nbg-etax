@@ -11,16 +11,18 @@ export default function Contact() {
         <div className="contact-details">
           <p>
             {" "}
-            <b>Address </b>: Nabiganj Pourohova Office{" "}
+            <b>Address </b>: Nabiganj Pouroshova Office, Nabiganj, 3370 {" "}
           </p>
           <p>
             {" "}
-            <b>Phone </b>: +88017********{" "}
+            <b>Phone </b>: +880 1619-560256{" "}
           </p>
           <p>
             {" "}
-            <b>Email </b>: exapmle@gmail.com{" "}
+            <b>Email </b>: nabipaura@gmail.com{" "}
           </p>
+
+          <p><b> Office Time: </b>MON-THU 09:00 - 05:00</p>
         </div>
         <hr />
 

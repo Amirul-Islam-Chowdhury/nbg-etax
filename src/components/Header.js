@@ -18,7 +18,7 @@ function Header() {
     <div>
       <nav className="navbar navbar-expand-lg ">
       <div className='logo'>
-          <img src='logo-nabiganj.jpeg' height="70" width="70" alt='logo'/>
+          <img src='https://graph.facebook.com/257868587911340/picture' height="70" width="70" alt='logo'/>
 
 
           </div>
